@@ -61,16 +61,16 @@ git remote -v                   查看远程库的详细信息<br/>
     master
   $ git checkout master
     Switched to branch 'master'
-</pre><br/>
+</pre>
 然后，敲命令git tag <name>就可以打一个新标签：<br/>
 <pre>
   $ git tag v1.0
-</pre><br/>
+</pre>
 可以用命令git tag查看所有标签：如下：<br/>
 <pre>
   $ git tag
     v1.0
-</pre><br/>
+</pre>
 默认标签是打在最新提交的commit上的。有时候，如果忘了打标签,我们找到历史提交的commit id，然后打上就可以了：<br/>
 <pre>
   $ git log --pretty=oneline --abbrev-commit
@@ -84,7 +84,7 @@ git remote -v                   查看远程库的详细信息<br/>
     fec145a branch test
     d17efd8 remove test.txt
     ...
-</pre><br/>
+</pre>
 比方说要对add merge这次提交打标签，它对应的commit id是6224937，敲入命令：<br/>
 <pre>
   $ git tag v0.9 6224937
@@ -94,7 +94,7 @@ git remote -v                   查看远程库的详细信息<br/>
   $ git tag
     v0.9
     v1.0
-</pre><br/>
+</pre>
 注意，标签不是按时间顺序列出，而是按字母排序的。可以用git show <tagname>查看标签信息：<br/>
 <pre>
   $ git show v0.9
@@ -103,13 +103,13 @@ git remote -v                   查看远程库的详细信息<br/>
     Date:   Thu Aug 22 11:22:08 2013 +0800
 
     add merge
-</pre><br/>
+</pre>
 可以看到，v0.9确实打在add merge这次提交上。<br/>
 
 还可以创建带有说明的标签，用-a指定标签名，-m指定说明文字：<br/>
 <pre>
   $ git tag -a v0.1 -m "version 0.1 released" 3628164
-</pre><br/>
+</pre>
 用命令git show <tagname>可以看到说明文字：<br/>
 <pre>
   $ git show v0.1
@@ -123,4 +123,4 @@ git remote -v                   查看远程库的详细信息<br/>
     Author: Michael Liao <askxuefeng@gmail.com>
     Date:   Tue Aug 20 15:11:49 2013 +0800
     append GPL
-</pre><br/>
+</pre>
